@@ -1,0 +1,19 @@
+#*********************************************************
+# Author        : qingtao5
+# Email         : qingtao5@staff.weibo.com
+# Create time   : 2017-01-08 21:13
+# Last modified : 2017-01-08 21:13
+# Filename      : SConstruct
+# Description   : 
+#*********************************************************
+
+srcs = Split('main.cc')
+target = 'a.out'
+cpp_path= Split('.')
+libs = Split('')
+lib_path = Split('')
+cc_flags = Split('-g -std=c++11')
+cc = 'gcc'
+cxx = 'g++' 
+
+Program(target, srcs, CPPPATH=cpp_path, LIBS=libs, LIBPATH=lib_path, CCFLAGS=cc_flags, CC=cc, CXX=cxx)
